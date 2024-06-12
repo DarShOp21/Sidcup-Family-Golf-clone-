@@ -1,0 +1,555 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+#cursor{
+    height: 25px;
+    width:25px;
+    background-color: rgb(149 193 30);
+    position: fixed;
+    border-radius: 50%;
+    z-index: 100;
+}
+#blur-cursor{
+    height: 400px;
+    width:400px;
+    background-color: rgba(150, 193, 30, 0.658);
+    position: fixed;
+    filter: blur(80px);
+    border-radius: 50%;
+    z-index: 9;
+}
+#nav{
+    height: 135px;
+    width: 100%;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 140px;
+    gap: 50px;
+    position: fixed;
+    z-index: 99;
+}
+
+#nav img{
+    height: 78px;
+}
+
+#nav h4{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+#main{
+    position: relative;
+    background: rgba(0, 0, 0, 0.452);
+} 
+
+#main #page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#page1 h1{
+    font-size: 140px;
+    text-transform: uppercase;
+    font-weight: 900;
+    position: relative;
+    z-index: 10;
+}
+
+#page1 h1::before{
+    content: "eat. drink. play.";
+    color: #000;
+    position: absolute;
+    top: -5.2px;
+    left: -5.5px;
+    z-index: -1;
+    -webkit-text-stroke: 1.8px rgb(149 193 30);
+}
+
+#page1 h3{
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin: 17px 0;
+    z-index: 10;
+}
+
+#page1 p{
+    font-size: 20px;
+    width: 40%;
+    z-index: 10;
+    /* background-color: rgb(16, 77, 77); */
+}
+
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    z-index: 10;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#scroller{
+    /* background-color: red; */
+    white-space: nowrap;
+    z-index: 11;
+    overflow-x: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+#scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll ;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#scroller h4{
+    display: inline-block;
+    font-size: 135px;
+    font-weight: 900;
+    text-transform: uppercase ;
+    color: white;
+    margin-right: 25px;
+}
+
+@keyframes scroll{
+    from{
+        transform: translateX(0);
+    } to {
+        transform: translateX(-100%);
+    }
+}
+
+#scroller h4:hover{
+    color: #80D22F;
+    transition: all linear 0.2s;
+}
+
+#about-us{
+    height: 45vh;
+    width: 100%;
+    position: relative;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 10;
+    text-align: center;
+    margin-top: 75px;
+}
+
+#about-us img{
+    width: 250px;
+    height: 250px;
+    /* margin: 0 130px; */
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+#about-text{
+    width: 98vh;
+    /* background: #f14343; */
+}
+
+#about-text h3{
+    font-size: 50px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+#about-text p{
+    font-size: 21px;
+    line-height: 38px;
+}
+
+#about-text #note{
+    margin-top: 40px;
+}
+
+#cards-container{
+    /* background-color: chocolate; */
+    height: 60vh;
+    width: 100%;
+    padding: 0 60px;
+    margin-top: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 10;
+}
+
+#page2 img{
+    width: 240px;
+    height: 180px;
+    position: relative;
+    top: 220px;
+    left: 110px;
+}
+
+#card{
+    width: 490px;
+    height: 540px;
+    background-color:rgb(149 193 30);
+    border-radius: 15px;
+    z-index: 10;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.card1{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+
+.card2{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+
+.card3{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/page-lessons.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+
+#overlay{
+    height: 100%; 
+    width: 100%;
+    background-color:rgb(149 193 30); 
+    padding: 160px 30px 0 30px;
+    opacity: 0;
+    transition: all ease 0.4s
+}
+
+#overlay h4{
+    font-size: 40px;
+    font-weight: 900;
+    margin: 10px 0;
+    text-transform: uppercase;
+    color: #000;
+    white-space: nowrap;
+}
+
+#overlay p{
+    color: #000;
+    margin: 15px 0;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+#card:hover #overlay{
+    opacity: 1;
+}
+
+#card:hover{
+    transform: rotate3d(-1,1,0,18deg);
+    transition: ease 0.3s;
+}
+
+#green-field{
+    height: 38vh;
+    width: 100%;
+    position: relative;
+    /* background-color: red; */
+    margin: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    background: linear-gradient(to left bottom , #039c3d,#95c11e, #B3E824);
+}
+
+#green-field h2{
+    font-size: 27px;
+    font-weight: 900;
+    width: 43%;
+    text-align: center;
+    line-height: 50px;
+    color: #000;
+}
+
+#green-field img{
+    height: 100%;
+    width: 200px;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    overflow-y: hidden;
+}
+
+#page3{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    z-index: 10;
+}
+
+#page3 img{
+    height: 57vh;
+    width: 2200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-left:145px;
+    margin-top: 5vh;
+    z-index: 10;
+}
+
+#page3 #info{
+    height: 100%;
+    margin: 0 145px;
+    padding-top: 100px;
+    /* background: red; */
+    z-index: 10;
+}
+
+#info button{
+    color: white;
+    background-color: rgb(0, 0, 0);
+    width: 195px;
+    height: 48px;
+    border-radius: 24px;
+    border: 3.5px solid rgb(149 193 30) ;
+    padding-top: 3px;
+}
+
+#page3 h2{
+    font-size:50px;
+    font-weight: 900;
+    margin-bottom: 27px;
+}
+
+#page3 p{
+    font-size: 19px;
+    line-height: 35px;
+    margin-bottom: 33px;
+}
+
+button p{
+    font-size: 17px;
+    text-align: center;
+
+}
+
+#page4{
+    min-height :100vh;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+#page4 #slant{
+    white-space: nowrap;
+    z-index: 11;
+    overflow-x: hidden;
+    position: relative;
+    padding-top: 80px;
+    display: flex;
+    transform: rotate(-2.1deg);
+}
+
+#slant #pics{
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll ;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#slant img{
+    height: 350px;
+    width: 290px;
+    border-radius: 18px;
+    margin: 0 18px;
+}
+
+#slant-text h2{
+    font-size: 27px;
+    font-weight: 900;
+    position: relative;
+    color: #b3e824;
+    text-transform: uppercase;
+    margin-left: 70%;
+    transform: rotate(-2.1deg);
+    z-index: 10;
+}
+
+#quote{
+    height: 100vh;
+    width: 100%;
+    background: #000;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#quote img{
+    position: absolutex;
+    height: 80px;
+    width: 80px;
+    z-index: 11;
+}
+
+#quote h2{
+    height: 80%;
+    width: 59%;
+    text-transform: uppercase;
+    font-size: 31px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 50px;
+    z-index: 10;
+    margin-top: -100px;
+}
+
+#quote #img1{
+    margin-right: 25px;
+    margin-bottom: 400px;
+} 
+
+#quote #img2{
+    margin-right: -25px;
+    margin-bottom: -240px;
+}
+
+#page5{
+    height: 84vh;
+    width: 100%;
+    background: #000;
+}
+
+#page5 #part1{
+    height: 40vh;
+    width: 100%;
+    background: rgb(0, 0, 0);
+}
+
+#part1 #boxes{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0  100px;
+}
+
+#part1 h1{
+    font-size: 100px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: black;
+    position: relative;
+    text-align: center;
+    z-index: 10;
+    margin-bottom: -36px;
+}
+
+#part1 h1::before{
+    content: "What are you waiting for?";
+    position: absolute;
+    z-index: -1;
+    -webkit-text-stroke: 1.8px white;
+}
+
+#boxes div{
+    background-color: #b3e824;
+    height: 198px;
+    width: 30.5%;
+    border-radius: 15px;
+    z-index: 11;
+}
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box h2{
+    font-size: 40px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #000;
+    z-index: 10;
+}
+#page5 #part2{
+    height: 44vh;
+    width: 100%;
+    background: linear-gradient(to left bottom,  #039c3d,#95c11e, #B3E824);
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+#part2 div{
+    margin-left: 13vh;
+}
+
+#logos img{
+    height: 130px;
+    width: 130px;
+    margin-bottom: 40px;
+}
+
+#socials svg{
+    margin-left: -80px;
+}
+
+
+#part2 h2{
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #000;
+    margin-bottom: 18px;
+}
+
+#right-text{
+    margin-left: 125vh;
+}
+
+#right-text p{
+    font-size: 19px;
+    font-weight: 650;
+    color: #000;
+    line-height: 25px;
+    z-index: 10;
+}
+
+#right-text h3{
+    text-transform: uppercase;
+    color: #000;
+    font-size: 20px;
+    font-weight: 800;
+    margin-top: 13px;
+    z-index: 10;
+}
